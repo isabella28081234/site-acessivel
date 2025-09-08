@@ -2,136 +2,235 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <title>Tropicália</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🌊 Malta - Paraíso Mediterrâneo</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #90e0ef, #00b4d8, #0077b6, #03045e);
+      color: #023047;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      background: rgba(0, 119, 182, 0.9);
+      backdrop-filter: blur(5px);
+      padding: 1rem 0;
+    }
+
+    nav a {
+      color: #fff !important;
+      font-weight: bold;
+      margin-left: 1rem;
+    }
+
+    /* HERO */
+    .hero {
+      background: url('img/malta-ocean.jpg') no-repeat center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn-explorar {
+      background: #ffb703;
+      border: none;
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      margin-top: 2rem;
+      color: #023047;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-explorar:hover {
+      background: #fb8500;
+      transform: scale(1.1);
+    }
+
+    /* SOBRE MALTA */
+    .sobre {
+      background: #ffffffdd;
+      border-radius: 20px;
+      padding: 3rem;
+      margin-top: 4rem;
+      backdrop-filter: blur(6px);
+    }
+
+    .sobre img {
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* GALERIA */
+    .galeria {
+      margin-top: 5rem;
+    }
+
+    .galeria h2 {
+      color: #0077b6;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    .galeria img {
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
+      transition: transform 0.5s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.1) rotate(-2deg);
+    }
+
+    /* CONTATO */
+    #contato {
+      background: linear-gradient(to top, #0077b6, #00b4d8);
+      border-radius: 20px;
+      padding: 3rem;
+      color: white;
+      margin-top: 5rem;
+    }
+
+    #contato input,
+    #contato textarea {
+      border-radius: 15px;
+    }
+
+    #contato button {
+      background: #ffb703;
+      border: none;
+      color: #023047;
+      font-weight: bold;
+      padding: 0.8rem;
+      border-radius: 50px;
+    }
+
+    #contato button:hover {
+      background: #fb8500;
+    }
+
+    /* RODAPÉ */
+    footer {
+      background: #03045e;
+      color: #fff;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    footer i {
+      font-size: 1.8rem;
+      margin: 0 12px;
+      color: #90e0ef;
+    }
+
+    footer i:hover {
+      color: #ffb703;
+    }
+  </style>
 </head>
 
 <body>
-    <header class=" p-5">
 
-        <nav class="container d-flex justify-content-between align-items-center" >
-            <img src="img/logo principal.png class="nav-img " loading="lazy">
-            <ul class="nav mt-5">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-            </ul>
+  <!-- NAV -->
+  <header>
+    <nav class="container d-flex justify-content-between align-items-center">
+      <h2 class="text-white fw-bold">⚓ Malta</h2>
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <div id="acessibilidade" class="menu-acessibilidade">
-                         
-                    <button id="aumentar-fonte" class="btn btn-primary fw-bold">A +</button>
-                    
-                    <button id="diminuir-fonte" class="btn btn-primary fw-bold">A -</button>
-                    
-                </div>
-            </div>
-            
-        </nav>
-       
-    </header>
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <h1>Descubra Malta</h1>
+    <p>Um mergulho no Mediterrâneo: mar cristalino e história sem igual</p>
+    <a href="#sobre" class="btn btn-explorar">Explorar</a>
+  </section>
 
-
-    <main class="container my-5">
-
-        <section id="inicio" class="my-5">
-            <div class="inicio-fundo d-flex justify-content-between align-items-center">
-                <div class="esquerda-conteudo">
-                    <h1 class="display-4 text-white fst-italic fw-bold">Boas-vindas a</h1>
-                    <img src="img/mar de cima verde com barcos.jpg" class="mb-3" width="563"
-                        height="278" loading="lazy">
-                    <a href="#tropicalia"
-                        class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero
-                        conhecer!</a>
-                </div>
-                <img src="img/lossy-page1-640px-Os_Mutantes.tif (1).png" alt="A imagem apresenta o grupo musical Os mutantes, sao tres pessoas cantando em  dois microfones" title="Os mutantes - CC0 Domínio Público / Acervo Arquivo Nacional" class="img-fluid img-inicio">
-
-              </div>
-        </section>
-
-        <section id="tropicalia" class="my-5 pt-6 secao-tropicalia">
-    <div class="container d-flex align-items-center">
-        <div class="col-4 d-flex justify-content-center">
-            <img src="img/mar de cima verde com barcos.jpg" class="rounded-pill" alt="" width="273" height="331" loading="lazy">
-        </div>
-        <div class="col-5">
-            <h2 style="color: blue;">Sobre a ilha de Malta</h2>
-            <p class="p-2" style="color: blue;">Malta é um arquipélago situado na região central do Mediterrâneo, entre a Sicília e a costa do Norte da África. O país é conhecido por locais históricos relacionados a uma sucessão de governantes, entre eles os romanos, os mouros, a Ordem Soberana e Militar de Malta, os franceses e os britânicos. Malta conta com um grande número de fortalezas, templos megalíticos e o Hipogeu de Hal Saflieni, um complexo subterrâneo de corredores e câmaras funerárias que data aproximadamente de 4.000 a.C.</p>
-        </div>
+  <!-- SOBRE MALTA -->
+  <section id="sobre" class="container sobre d-flex flex-wrap align-items-center gap-4">
+    <div class="col-lg-6">
+      <h2 class="fw-bold text-primary">🌊 Sobre Malta</h2>
+      <p>Malta é um arquipélago no coração do Mediterrâneo, famoso por suas águas azul-turquesa, portos charmosos e
+        cidades históricas. Passear por Valletta é como caminhar em um museu a céu aberto, enquanto as enseadas escondidas
+        convidam para mergulhos inesquecíveis. Um destino perfeito para quem ama o mar e a cultura.</p>
     </div>
-</section>
+    <div class="col-lg-5">
+      <img src="img/transferir (5).jfif" alt="Harbor de Malta" class="img-fluid">
+    </div>
+  </section>
 
-        </section>
+  <!-- GALERIA -->
+  <section id="galeria" class="container galeria text-center">
+    <h2>🏝️ Galeria</h2>
+    <div class="row">
+      <div class="col-md-3"><img src="img/transferir (1).jfif" class="img-fluid"></div>
+      <div class="col-md-3"><img src="img/transferir (2).jfif" class="img-fluid"></div>
+      <div class="col-md-3"><img src="img/transferir (3).jfif" class="img-fluid"></div>
+      <div class="col-md-3"><img src="img/transferir (4).jfif" class="img-fluid"></div>
+    </div>
+  </section>
 
-        <section id="galeria">
-             <h2 class="text-center pt-5" style="color: blue;">Galeria</h2> <!-- Título da seção em azul -->
-            <div class="container p-3 mt-3 fundo-galeria ">
+  <!-- CONTATO -->
+  <section id="contato" class="container">
+    <h2 class="text-center mb-4">📩 Entre em contato</h2>
+    <form>
+      <div class="mb-3">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" class="form-control mt-1" placeholder="Digite seu nome">
+      </div>
+      <div class="mb-3">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control mt-1" placeholder="Digite seu email">
+      </div>
+      <div class="mb-3">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" class="form-control mt-1" rows="4"
+          placeholder="Escreva sua mensagem"></textarea>
+      </div>
+      <button type="submit" class="btn w-100">Enviar mensagem</button>
+    </form>
+  </section>
 
-                <div class="row justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/egito.jpg"
-                            class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/cidade de cima.jpg" class="img-fluid rounded-5"
-                            loading="lazy">
-                    </div>
-                </div>
-                <div class="row mt-4  justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/girl in the city.jpg" class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/ondas de cima.jpg"
-                            class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                </div>
-             </div>
-        </section>
+  <!-- FOOTER -->
+  <footer class="text-center">
+    <p>Siga-nos:</p>
+    <i class="bi bi-instagram"></i>
+    <i class="bi bi-facebook"></i>
+    <i class="bi bi-whatsapp"></i>
+    <p class="mt-3">© 2025 - Site fictício inspirado em Malta 🌊</p>
+  </footer>
 
-        <section id="contato">
-            <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario"> <!-- Caixa do formulário com 60% de largura -->
-                    <h2 class="mb-3">Entre em contato</h2>
-                    <form>
-                        <div class="form-group mb-3">
-                            <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu nome completo">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu email">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
-                                placeholder="Escreva sua mensagem"></textarea>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar
-                                mensagem</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="text-center p-3 fst-italic">
-        <p>Acesse nossas redes:</p>
-        <i class="bi bi-whatsapp"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-tiktok"></i>
-        <p class="mt-3">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
-    </footer>
-    
-    <script src="script.js"></script>
-  
 </body>
 
 </html>
